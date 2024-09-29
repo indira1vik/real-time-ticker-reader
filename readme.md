@@ -1,4 +1,4 @@
-# Real-time Audio conversion from Scrolling Ticker Text For visually Impaired
+# Real-time Audio conversion from Scrolling Ticker Text For Visually Impaired
 
 Here are some of the commands to run the program.
 
