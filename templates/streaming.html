@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYP 2020-24</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .one_link{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            font-size: 16px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 840px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .container a:hover {
+            text-decoration: underline;
+        }
+
+        .line {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Live Video Streaming Intermediate Output</h1>
+        <div>
+            {% if url_input == "" %}
+            <div class="one_link">No URL Given as input</div>
+            {% else %}
+            <div class="one_link"><a href="{{url_input}}" target="_blank">Video Link</a></div><br>
+            {% endif %}
+            {% for line in output_lines %}
+            <div class="line">{{ line }}</div><br>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYP 2020-24</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 32px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #url_input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            box-sizing: border-box; 
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            box-sizing: border-box; 
+        }
+
+        .copy-button {
+            width: 312px;
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .copy-button:hover {
+            background-color: #0056b3;
+        }
+        .url_input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            font-size: 16px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Real-time Audio Synthesis From Scrolling Tickers in Live Video Streams for Visually Impaired</h2>
+        <form action="/submit" method="post">
+            <input id="url_input" name="url_input" type="text" placeholder="Enter Video URL" />
+            <input type="submit" id="submit" value="Play Video" />
+        </form>
+
+        <input class="url_input" type="text" value="https://youtu.be/w9uJg68CV4g" id="mySky" readonly>
+        <button class="copy-button" onclick="copySky()">Copy Sky News Live URL</button>
+        <br>
+        <input class="url_input" type="text" value="https://youtu.be/XWq5kBlakcQ" id="myCNA" readonly>
+        <button class="copy-button" onclick="copyCNA()">Copy CNA News Live URL</button>
+        <br>
+        <input class="url_input" type="text" value="https://youtu.be/6HodCcEW_oQ" id="myDW" readonly>
+        <button class="copy-button" onclick="copyDW()">Copy DW News Live URL</button>
+        <br>
+        <input class="url_input" type="text" value="https://youtu.be/KIkSoqlI2Aw" id="myGB" readonly>
+        <button class="copy-button" onclick="copyGB()">Copy GB News Live URL</button>
+        <br>
+        <input class="url_input" type="text" value="https://youtu.be/sYZtOFzM78M" id="myIND" readonly>
+        <button class="copy-button" onclick="copyIND()">Copy India News Live URL</button>
+        <br>
+        <input class="url_input" type="text" value="https://youtu.be/gCNeDWCI0vo" id="myALZ" readonly>
+        <button class="copy-button" onclick="copyALZ()">Copy Aljazeera News Live URL</button>
+        <br>
+        <input class="url_input" type="text" value="./videos/6.mp4" id="myCAM">
+        <button class="copy-button" onclick="copyCAM()">Copy Live Camera Video Location</button>
+        <br>
+        <input class="url_input" type="text" value="Camera" id="myLiveCAM" readonly>
+        <button class="copy-button" onclick="copyLiveCAM()">Click to Live Camera</button>
+        <br>
+    </div>
+
+    <script>
+        function copySky() {
+            var copyText = document.getElementById("mySky");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value).then(function() {
+                var copiedInput = document.getElementById("url_input");
+                copiedInput.value = copyText.value;
+            });
+        }
+
+        function copyCNA() {
+            var copyText = document.getElementById("myCNA");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value).then(function() {
+                var copiedInput = document.getElementById("url_input");
+                copiedInput.value = copyText.value;
+            });
+        }
+
+        function copyDW() {
+            var copyText = document.getElementById("myDW");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value).then(function() {
+                var copiedInput = document.getElementById("url_input");
+                copiedInput.value = copyText.value;
+            });
+        }
+
+        function copyIND() {
+            var copyText = document.getElementById("myIND");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value).then(function() {
+                var copiedInput = document.getElementById("url_input");
+                copiedInput.value = copyText.value;
+            });
+        }
+
+        function copyALZ() {
+            var copyText = document.getElementById("myALZ");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value).then(function() {
+                var copiedInput = document.getElementById("url_input");
+                copiedInput.value = copyText.value;
+            });
+        }
+
+        function copyGB() {
+            var copyText = document.getElementById("myGB");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value).then(function() {
+                var copiedInput = document.getElementById("url_input");
+                copiedInput.value = copyText.value;
+            });
+        }
+
+        function copyCAM() {
+            var copyText = document.getElementById("myCAM");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value).then(function() {
+                var copiedInput = document.getElementById("url_input");
+                copiedInput.value = copyText.value;
+            });
+        }
+
+        function copyLiveCAM() {
+            var copyText = document.getElementById("myLiveCAM");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value).then(function() {
+                var copiedInput = document.getElementById("url_input");
+                copiedInput.value = copyText.value;
+            });
+        }
+
+    </script>
+</body>
+
+</html>
